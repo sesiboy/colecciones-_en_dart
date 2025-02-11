@@ -1,4 +1,5 @@
 void main() {  
+    print("eduardo jireh correa garcia 21308051280344 grupo 6j");
     List<int> numeros = [10,20,30];   
    print("listas de numeros enteros:");
    print(numeros);
