@@ -2,6 +2,7 @@ import 'dart:io';
 
 // Clase Sucursal
 class Sucursal {
+  // Atributos
   int idSucursal;
   int numEmpleado;
   String direccion;
@@ -9,6 +10,7 @@ class Sucursal {
   String producto;
   String telefono;
 
+  // Constructor
   Sucursal({
     required this.idSucursal,
     required this.numEmpleado,
@@ -18,6 +20,7 @@ class Sucursal {
     required this.telefono,
   });
 
+  // Función para capturar datos
   void capturarDatosSucursal() {
     print("\nCapturando datos de la Sucursal:");
     print("Ingrese el ID de la sucursal:");
@@ -39,6 +42,7 @@ class Sucursal {
     telefono = stdin.readLineSync()!;
   }
 
+  // Función para mostrar datos
   void mostrarDatosSucursal() {
     print("\nDatos de la Sucursal:");
     print("ID Sucursal: $idSucursal");
@@ -52,6 +56,7 @@ class Sucursal {
 
 // Clase Cliente
 class Cliente {
+  // Atributos
   int idCliente;
   String direccion;
   String nombre;
@@ -60,6 +65,7 @@ class Cliente {
   String tipoPago;
   String fechaNacimiento;
 
+  // Constructor
   Cliente({
     required this.idCliente,
     required this.direccion,
@@ -70,6 +76,7 @@ class Cliente {
     required this.fechaNacimiento,
   });
 
+  // Función para capturar datos
   void capturarDatosCliente() {
     print("\nCapturando datos del Cliente:");
     print("Ingrese el ID del cliente:");
@@ -94,6 +101,7 @@ class Cliente {
     fechaNacimiento = stdin.readLineSync()!;
   }
 
+  // Función para mostrar datos
   void mostrarDatosCliente() {
     print("\nDatos del Cliente:");
     print("ID Cliente: $idCliente");
@@ -108,6 +116,7 @@ class Cliente {
 
 // Clase Distribuidor
 class Distribuidor {
+  // Atributos
   int idDistribuidor;
   String nombre;
   String telefono;
@@ -116,6 +125,7 @@ class Distribuidor {
   String nie;
   int cantidad;
 
+  // Constructor
   Distribuidor({
     required this.idDistribuidor,
     required this.nombre,
@@ -126,6 +136,7 @@ class Distribuidor {
     required this.cantidad,
   });
 
+  // Función para capturar datos
   void capturarDatosDistribuidor() {
     print("\nCapturando datos del Distribuidor:");
     print("Ingrese el ID del distribuidor:");
@@ -150,6 +161,7 @@ class Distribuidor {
     cantidad = int.parse(stdin.readLineSync()!);
   }
 
+  // Función para mostrar datos
   void mostrarDatosDistribuidor() {
     print("\nDatos del Distribuidor:");
     print("ID Distribuidor: $idDistribuidor");
@@ -163,8 +175,7 @@ class Distribuidor {
 }
 
 void main() {
-  print("eduardo jireh correa garcia 21308051280344 Grupo 6to J"); // Imprime tu nombre aquí
-
+  // Crear objetos de cada clase
   Sucursal sucursal = Sucursal(
     idSucursal: 0,
     numEmpleado: 0,
@@ -194,12 +205,15 @@ void main() {
     cantidad: 0,
   );
 
+  // Capturar y mostrar datos de la Sucursal
   sucursal.capturarDatosSucursal();
   sucursal.mostrarDatosSucursal();
 
+  // Capturar y mostrar datos del Cliente
   cliente.capturarDatosCliente();
   cliente.mostrarDatosCliente();
 
+  // Capturar y mostrar datos del Distribuidor
   distribuidor.capturarDatosDistribuidor();
   distribuidor.mostrarDatosDistribuidor();
 }
